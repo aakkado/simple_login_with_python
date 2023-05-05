@@ -4,7 +4,7 @@ def cadastrar_usuario(usuario, senha):
     if verificar_usuario(usuario):
         return 'Usuário já cadastrado'
     else:
-        with open('./usuarios.txt', 'w') as f:
+        with open('./usuarios.txt', 'a') as f:
             f.write(f'{usuario}:{senha}\n')
         return 'Usuário cadastrado com sucesso!'
 
